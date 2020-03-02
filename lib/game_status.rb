@@ -20,3 +20,10 @@ def won?(board)
   end
   return nil
 end
+
+def full?(board)
+  board.each do |space|
+    space == " " || space == "" ? return false : space
+  end
+  return true
+end
