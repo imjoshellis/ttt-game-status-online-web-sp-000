@@ -9,3 +9,11 @@ WIN_COMBINATIONS = [
   [0,3,6],[1,4,7],[2,5,8], #cols
   [0,4,8],[2,4,6]          #diagonals
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each do |combo|
+    if board[combo[0]] == board[combo[1]] && board[combo[0]] == board[combo[2]]
+      return combo
+    end
+  end
+end
